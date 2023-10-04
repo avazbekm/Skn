@@ -2,7 +2,7 @@
 
 namespace Skn.Domain.Entities;
 
-internal class SimCard : Auditable
+public class SimCard : Auditable
 {
     public string Name { get; set; }
     public int Count { get; set; }
@@ -10,5 +10,4 @@ internal class SimCard : Auditable
     public string EndSimCard { get; set;}
 
     public long UserId { get; set; }
-    public User User { get; set; }
 }
