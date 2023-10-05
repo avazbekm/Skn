@@ -10,6 +10,6 @@ public interface IRepository<T> where T : Auditable
     void Delete(T entity);
     ValueTask<T> SelectAsync(Expression<Func<T, bool>> expression, string[] includes = null);
     IQueryable<T> SelectAll(
-        Expression<Func<T, bool>> expression = null, string[] includes = null, bool isTracking = true);
+        Expression<Func<T, bool>> expression = null, string[] includes = null, bool isTracked = true);
     ValueTask<bool> SaveAsync();
 }
