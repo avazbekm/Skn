@@ -1,9 +1,9 @@
-﻿using Skn.Domain.Configurations;
-using Skn.Service.DTOs.Users;
+﻿using Skn.Service.DTOs.Users;
+using Skn.Domain.Configurations;
 
 namespace Skn.Service.Interfaces;
 
-public interface IUser
+public interface IUserService
 {
     ValueTask<UserResultDto> AddAsync(UserCreationDto dto);
     ValueTask<UserResultDto> MydifyAsync(UserUpdateDto dto);

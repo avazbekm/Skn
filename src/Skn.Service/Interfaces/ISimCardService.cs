@@ -3,7 +3,7 @@ using Skn.Service.DTOs.SimCards;
 
 namespace Skn.Service.Interfaces;
 
-public interface ISimCard
+public interface ISimCardService
 {
     ValueTask<SimCardResultDto> AddAsync(SimCardCreationDto dto);
     ValueTask<SimCardResultDto> MydifyAsync(SimCardUpdateDto dto);
