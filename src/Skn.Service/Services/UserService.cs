@@ -18,8 +18,11 @@ public class UserService : IUserService
         this.repository = repository;
     }
 
-    public ValueTask<UserResultDto> AddAsync(UserCreationDto dto)
+    public async ValueTask<UserResultDto> AddAsync(UserCreationDto dto)
     {
+        var user = await this.repository.SelectAsync(u => u.FirstName.Equals(dto.FirstName));
+        if(user is not  null) 
+            throw new 
         throw new NotImplementedException();
     }
 
